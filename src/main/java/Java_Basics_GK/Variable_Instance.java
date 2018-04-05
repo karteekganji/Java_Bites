@@ -1,4 +1,4 @@
-package Java_Basic_Bites;
+package Java_Basics_GK;
 
 public class Variable_Instance {
 	public String studname; // this instance variable is visible for any child class

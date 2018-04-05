@@ -1,8 +1,6 @@
-package Java_Basic_Bites;
+package Java_Basics_GK;
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -22,7 +20,8 @@ public class Dump {
 		 String a = "USER_STORY_MARKED_AS_COMPLETED";
 		 String b = a.toString().replaceAll("_", " ");
 		 System.out.println(b);
+		
 
 	}
-
+	
 }

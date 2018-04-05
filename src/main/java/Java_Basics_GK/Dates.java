@@ -1,4 +1,4 @@
-package Java_Basic_Bites;
+package Java_Basics_GK;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

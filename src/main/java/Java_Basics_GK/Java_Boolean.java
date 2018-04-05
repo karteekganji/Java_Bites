@@ -1,4 +1,4 @@
-package Java_Basic_Bites;
+package Java_Basics_GK;
 
 public class Java_Boolean {
 	public static void main(String args[]) {
