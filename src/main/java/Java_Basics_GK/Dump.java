@@ -21,6 +21,14 @@ public class Dump {
 		 String b = a.toString().replaceAll("_", " ");
 		 System.out.println(b);
 		
+		int i=1;
+		int n = 10;
+		         while(i<=n)
+		         {
+		             System.out.print("["+i+"]");
+		              i++;
+		         }
+		
 
 	}
 	

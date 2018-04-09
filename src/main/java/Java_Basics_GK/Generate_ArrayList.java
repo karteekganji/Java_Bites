@@ -1,7 +1,5 @@
 package Java_Basics_GK;
 
-import java.util.ArrayList;
-
 public class Generate_ArrayList {
 
 	public static void main(String[] args) {
