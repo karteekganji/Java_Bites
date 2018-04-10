@@ -7,7 +7,7 @@ import java.util.Date;
 public class Dump {
 
 	public static void main(String[] args) {
-		ArrayList<String> arrlist = new ArrayList<String>(2);
+		ArrayList<String> arrlist = new ArrayList<String>();
 		 arrlist.add("1");
 		 arrlist.add("2");
 		 		Date date = new Date();
