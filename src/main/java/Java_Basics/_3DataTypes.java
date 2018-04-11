@@ -1,6 +1,6 @@
 package Java_Basics;
 
-public class DataTypes {
+public class _3DataTypes {
 	
 	/*
 	 * 1) Primitive data types 
@@ -25,6 +25,7 @@ public class DataTypes {
 	 * 
 	 * boolean data type is used for variables that holds either true or false.
 	 */
+	@SuppressWarnings("unused")
 	public static void primitiveDataTypes() {
 		
 		/*
@@ -63,7 +64,6 @@ public class DataTypes {
     	
     	boolean b = false;
     	
-    	System.out.println();
 	}
 	public static void main(String[] args) {
 		primitiveDataTypes();

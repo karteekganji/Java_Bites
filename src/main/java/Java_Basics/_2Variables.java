@@ -1,6 +1,6 @@
 package Java_Basics;
 
-public class Variables {
+public class _2Variables {
 	
 	/*
 	 * >> To declare a variable follow this syntax:
@@ -45,30 +45,32 @@ public class Variables {
 		private static String studname; // this is a private, static variable
 		public static final String studbranch = "MME"; // constant variable
 		
-		   public static void StaticVarMethod(){
-		      StaticVariableExample obj = new StaticVariableExample();
-		      StaticVariableExample obj2 = new StaticVariableExample();
-		      StaticVariableExample obj3 = new StaticVariableExample();
-		      
-		      //System.out.println(myClassVar);
-		      // Warning occurs becuase static class do not required creating Object 
-		      //All three will display "class or static variable"
-		      
-		      System.out.println(obj.myClassVar);
-		      System.out.println(obj2.myClassVar);
-		      System.out.println(obj3.myClassVar);
+		@SuppressWarnings("static-access")
+		public static void StaticVarMethod() {
+			StaticVariableExample obj = new StaticVariableExample();
+			StaticVariableExample obj2 = new StaticVariableExample();
+			StaticVariableExample obj3 = new StaticVariableExample();
 
-		      //changing the value of static variable using obj2
-		      obj2.myClassVar = "Changed Text";
+			// System.out.println(myClassVar);
+			// Warning occurs becuase static class do not required creating Object
+			// All three will display "class or static variable"
 
-		      //All three will display "Changed Text"
-		      System.out.println(obj.myClassVar);
-		      System.out.println(obj2.myClassVar);
-		      System.out.println(obj3.myClassVar);
-		   }
-		   public static void main(String[] args) {
-			   StaticVarMethod();
-			   
+			System.out.println(obj.myClassVar);
+			System.out.println(obj2.myClassVar);
+			System.out.println(obj3.myClassVar);
+
+			// changing the value of static variable using obj2
+			obj2.myClassVar = "Changed Text";
+
+			// All three will display "Changed Text"
+			System.out.println(obj.myClassVar);
+			System.out.println(obj2.myClassVar);
+			System.out.println(obj3.myClassVar);
+		}
+
+		public static void main(String[] args) {
+			StaticVarMethod();
+
 			studname = "Karteek"; // For STATIC varible no need to create object we can use it directly inside the class
 			System.out.println("Student Name is : " + studname + " and Branch is : " + studbranch);
 		}
@@ -101,7 +103,7 @@ public class Variables {
 			System.out.println(obj.myInstanceVar);
 			System.out.println(obj2.myInstanceVar);
 			System.out.println(obj3.myInstanceVar);
-			
+
 		}
 	}
 	
@@ -137,28 +139,29 @@ public class Variables {
 	}
 	
 	public static class LocalVariableExample {
-		   // instance variable
-		   public String myVar="instance variable";
-		    
-		   public void myMethod(){
-		    	// local variable
-		    	String myVar = "Inside Method";
-		    	System.out.println(myVar);
-		   }
-		   public static void main(String args[]){
-		      // Creating object
-			   LocalVariableExample obj = new LocalVariableExample();
-		    	
-		      /* We are calling the method, that changes the 
-		       * value of myVar. We are displaying myVar again after 
-		       * the method call, to demonstrate that the local 
-		       * variable scope is limited to the method itself.
-		       */
-		      System.out.println("Calling Method");
-		      obj.myMethod();
-		      System.out.println(obj.myVar);
-		   }
+		// instance variable
+		public String myVar = "instance variable";
+
+		public void myMethod() {
+			// local variable
+			String myVar = "Inside Method";
+			System.out.println(myVar);
 		}
+
+		public static void main(String args[]) {
+			// Creating object
+			LocalVariableExample obj = new LocalVariableExample();
+
+			/*
+			 * We are calling the method, that changes the value of myVar. We
+			 * are displaying myVar again after the method call, to demonstrate
+			 * that the local variable scope is limited to the method itself.
+			 */
+			System.out.println("Calling Method");
+			obj.myMethod();
+			System.out.println(obj.myVar);
+		}
+	}
 	
 
 }
