@@ -2,7 +2,7 @@ package Java_Basics;
 
 public class _9OOPs_Concepts {
 	
-	/*
+	/**
 	 * The primary purpose of object-oriented programming is to increase the
 	 * flexibility and maintainability of programs. Object oriented programming
 	 * brings together data and its behaviour(methods) in a single
@@ -10,7 +10,7 @@ public class _9OOPs_Concepts {
 	 */
 	// objects” that contain data and methods.
 	
-	/* Object: is a bundle of data and its behaviour(often known as methods) */
+	/** Object: is a bundle of data and its behaviour(often known as methods) */
 	
 	// Example : OOPS Concepts
 	public static class Website {
@@ -35,24 +35,31 @@ public class _9OOPs_Concepts {
 		}
 	}
 	
-	public static class EmployeeCount {
-		private int numOfEmployees = 0;
-
-		public void setNoOfEmployees(int count) {
-			numOfEmployees = count;
-		}
-
-		public int getNoOfEmployees() {
-			return numOfEmployees;
-		}
-	}
-
-	public static class EncapsulationExample {
-		public static void main(String args[]) {
-			EmployeeCount obj = new EmployeeCount();
-			obj.setNoOfEmployees(5613);
-			System.out.println("No Of Employees: " + obj.getNoOfEmployees());
-		}
-	}
+	/**
+	 * Characteristics of Objects:
+	 * 
+	 * If you find it hard to understand Abstraction and Encapsulation, do not
+	 * worry as I have covered these topics in detail with examples in the next
+	 * section of this guide.
+	 * 
+	 * 1). Abstraction 
+	 * 2). Encapsulation
+	 * 3). Message passing
+	 * 
+	 * Abstraction: Abstraction is a process where you show only “relevant” data
+	 * and “hide” unnecessary details of an object from the user.
+	 * 
+	 * Encapsulation: Encapsulation simply means binding object state(fields)
+	 * and behaviour(methods) together. If you are creating class, you are doing
+	 * encapsulation.
+	 * 
+	 * Message passing : A single object by itself may not be very useful. An
+	 * application contains many objects. One object interacts with another
+	 * object by invoking methods on that object. It is also referred to as
+	 * Method Invocation.
+	 */
+	
+	
+	
 
 }
