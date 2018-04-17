@@ -11,7 +11,7 @@ public class _12Inheritance {
 	 * those features that are unique to it, rest of the features can be
 	 * inherited from the parent class.
 	 * 
-	 * 1) .Inheritance is a process of defining a new class based on an existing
+	 * 1). Inheritance is a process of defining a new class based on an existing
 	 * class by extending its common data members and methods. 
 	 * 2). Inheritance allows us to reuse of code, it improves reusability in your java
 	 * application. 
@@ -63,29 +63,155 @@ public class _12Inheritance {
 		}
 	}
 	
+	
+	/**
+	 * The derived class inherits all the members and methods that are declared
+	 * as public or protected. If the members or methods of super class are
+	 * declared as private then the derived class cannot use them directly. The
+	 * private members can be accessed only in its own class. Such private
+	 * members can only be accessed using public or protected getter and setter
+	 * methods of super class as shown in the example below.
+	 */	
+	static class Teacher1 {
+		   private String designation = "Teacher";
+		   private String collegeName = "Beginnersbook";
+		   public String getDesignation() {
+			return designation;
+		   }
+		   protected void setDesignation(String designation) {
+			this.designation = designation;
+		   }
+		   protected String getCollegeName() {
+			return collegeName;
+		   }
+		   protected void setCollegeName(String collegeName) {
+			this.collegeName = collegeName;
+		   }
+		   void does(){
+			System.out.println("Teaching");
+		   }
+		}
+
+		public static class JavaExample extends Teacher1{
+		   String mainSubject = "Physics";
+		   public static void main(String args[]){
+			JavaExample obj = new JavaExample();
+			/* Note: we are not accessing the data members 
+			 * directly we are using public getter method 
+			 * to access the private members of parent class
+			 */
+			System.out.println(obj.getCollegeName());
+			System.out.println(obj.getDesignation());
+			System.out.println(obj.mainSubject);
+			obj.does();
+		   }
+		}
+	
 	/*
+	 * Constructors and Inheritance
+	 * 
+	 * constructor of sub class is invoked when we create the object of
+	 * subclass, it by default invokes the default constructor of super class.
+	 * Hence, in inheritance the objects are constructed top-down. The
+	 * superclass constructor can be called explicitly using the super keyword,
+	 * but it should be first statement in a constructor. The super keyword
+	 * refers to the superclass, immediately above of the calling class in the
+	 * hierarchy. The use of multiple super keywords to access an ancestor class
+	 * other than the direct parent is not permitted.
+	 */
+	static class onstructors_And_Inheritance{
+		// Parent class constructor
+		onstructors_And_Inheritance() {
+			System.out.println("Constructor of Parent");
+		}
+	}
+
+	static class JavaExample1 extends onstructors_And_Inheritance {
+		JavaExample1() {
+			/*
+			 * It by default invokes the constructor of parent class You can use
+			 * super() to call the constructor of parent. It should be the first
+			 * statement in the child class constructor, you can also call the
+			 * parameterized constructor of parent class by using super like
+			 * this: super(10), now this will invoke the parameterized
+			 * constructor of int arg
+			 */
+			System.out.println("Constructor of Child");
+		}
+
+		public static void main(String args[]) {
+			// Creating the object of child class
+			new JavaExample1();
+		}
+	}
+	
+	/*
+	 * Inheritance and Method Overriding
+	 * 
+	 * When we declare the same method in child class which is already present
+	 * in the parent class this is called method overriding. In this case
+	 * when we call the method from child class object, the child class version
+	 * of the method is called. However we can call the parent class method
+	 * using super keyword as I have shown in the example below:
+	 */
+	static class Inheritance_And_Method_Overriding {
+		// Parent class constructor
+		Inheritance_And_Method_Overriding() {
+			System.out.println("Constructor of Parent");
+		}
+
+		void disp() {
+			System.out.println("Parent Method");
+		}
+	}
+
+	static class JavaExample2 extends Inheritance_And_Method_Overriding {
+		JavaExample2() {
+			System.out.println("Constructor of Child");
+		}
+
+		void disp() {
+			System.out.println("Child Method");
+			// Calling the disp() method of parent class
+			super.disp();
+		}
+
+		public static void main(String args[]) {
+			// Creating the object of child class
+			JavaExample2 obj = new JavaExample2();
+			obj.disp();
+		}
+	}
+	
+	
+	/**
 	 * Note: Multi-level inheritance is allowed in Java but not multiple
 	 * inheritance
+	 */
+	
+	
+	/** Types of Inheritance:
 	 * 
-	 * Types of Inheritance: 
-	 * Single Inheritance: refers to a child and parent
+	 *  Single Inheritance: refers to a child and parent
 	 * class relationship where a class extends the another class.
-	 * 
-	 * Multilevel inheritance: refers to a child and parent class relationship
+	 **/	
+	
+	/* * Multilevel inheritance: refers to a child and parent class relationship
 	 * where a class extends the child class. For example class A extends class
 	 * B and class B extends class C.
-	 * 
-	 * Hierarchical inheritance: refers to a child and parent class relationship
+	 * */
+	/* * Hierarchical inheritance: refers to a child and parent class relationship
 	 * where more than one classes extends the same class. For example, class B
 	 * extends class A and class C extends class A.
-	 * 
-	 * Multiple Inheritance: refers to the concept of one class extending more
+	 **/ 
+	/* * Multiple Inheritance: refers to the concept of one class extending more
 	 * than one classes, which means a child class has two parent classes. Java
 	 * doesn’t support multiple inheritance, read more about it here.
-	 * 
-	 */
-	public static void main(String[] args) {
-
-	}
+	 * */
+	/* * Hybrid inheritance: Combination of more than one types of inheritance in
+	 * a single program. For example class A & B extends class C and another
+	 * class D extends class A then this is a hybrid inheritance example because
+	 * it is a combination of single and hierarchical inheritance.
+	 **/ 
 
 }
