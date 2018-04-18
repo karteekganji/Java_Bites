@@ -196,22 +196,136 @@ public class _12Inheritance {
 	 * class relationship where a class extends the another class.
 	 **/	
 	
-	/* * Multilevel inheritance: refers to a child and parent class relationship
+	// ###### Ex: Single Inheritance example program in Java
+
+	static class A {
+
+		public void methodA() {
+			System.out.println("Base class method");
+		}
+	}
+
+	static class Single_Inheritance extends M {
+
+		public void methodB() {
+			System.out.println("Child class method");
+		}
+
+		public static void main(String args[]) {
+			Single_Inheritance obj = new Single_Inheritance();
+			obj.methodA(); // calling super class method
+			obj.methodB(); // calling local method
+		}
+	}
+	
+	/** Multilevel inheritance: refers to a child and parent class relationship
 	 * where a class extends the child class. For example class A extends class
 	 * B and class B extends class C.
-	 * */
+	 **/
+	
+	// ###### Ex: Multilevel Inheritance example program in Java
+
+	static class X {
+		public void methodX() {
+			System.out.println("Class X method");
+		}
+	}
+
+	static class Y extends X {
+		public void methodY() {
+			System.out.println("class Y method");
+		}
+	}
+
+	static class Multilevel_Inheritance extends Y {
+		public void methodZ() {
+			System.out.println("class Z method");
+		}
+
+		public static void main(String args[]) {
+			Multilevel_Inheritance obj = new Multilevel_Inheritance();
+			obj.methodX(); // calling grand parent class method
+			obj.methodY(); // calling parent class method
+			obj.methodZ(); // calling local method
+		}
+	}
+	
 	/* * Hierarchical inheritance: refers to a child and parent class relationship
 	 * where more than one classes extends the same class. For example, class B
 	 * extends class A and class C extends class A.
 	 **/ 
+	
+	// ###### Ex: Example of Hierarchical Inheritance
+	
+	static class M {
+		public void methodA() {
+			System.out.println("method of Class M");
+		}
+	}
+
+	static class N extends M {
+		public void methodB() {
+			System.out.println("method of Class N");
+		}
+	}
+
+	static class O extends M {
+		public void methodC() {
+			System.out.println("method of Class O");
+		}
+	}
+
+	static class Hierarchical_inheritance {
+		public static void main(String args[]) {
+			N obj1 = new N();
+			O obj2 = new O();
+			// All classes can access the method of class A
+			obj1.methodA();
+			obj2.methodA();
+		}
+	}
+	
 	/* * Multiple Inheritance: refers to the concept of one class extending more
 	 * than one classes, which means a child class has two parent classes. Java
 	 * doesn’t support multiple inheritance, read more about it here.
 	 * */
-	/* * Hybrid inheritance: Combination of more than one types of inheritance in
-	 * a single program. For example class A & B extends class C and another
+	
+	
+	/** Hybrid inheritance: Combination of more than one types of inheritance
+	 * in a single program. For example class A & B extends class C and another
 	 * class D extends class A then this is a hybrid inheritance example because
 	 * it is a combination of single and hierarchical inheritance.
-	 **/ 
+	 **/
+	
+	static class E {
+		public void disp() {
+			System.out.println("E");
+		}
+	}
+
+	static class F extends E {
+		public void disp() {
+			System.out.println("F");
+		}
+	}
+
+	static class G extends E {
+		public void disp() {
+			System.out.println("G");
+		}
+
+	}
+
+	static class Hybrid_inheritance extends F {
+		public void disp() {
+			System.out.println("Hybrid_inheritance");
+		}
+
+		public static void main(String args[]) {
+
+			Hybrid_inheritance obj = new Hybrid_inheritance();
+			obj.disp();
+		}
+	}
 
 }
