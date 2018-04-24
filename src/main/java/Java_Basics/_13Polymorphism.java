@@ -108,7 +108,8 @@ public class _13Polymorphism {
 
 	public class Vehicle{ }
 	public class Car extends Vehicle{
-	   private License myCarLicense;
+	   @SuppressWarnings("unused")
+	private License myCarLicense;
 	}
 	
 	/*

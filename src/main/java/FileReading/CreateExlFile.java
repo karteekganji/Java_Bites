@@ -26,7 +26,8 @@ public class CreateExlFile{
     public static void createHSSFWorkbook(int index, String header) {
     	try {
             String filename = "/home/thyrmr/Desktop/NewHSSFWorkbook.xls" ;
-            HSSFWorkbook workbook = new HSSFWorkbook();
+            @SuppressWarnings("resource")
+			HSSFWorkbook workbook = new HSSFWorkbook();
             HSSFSheet sheet = workbook.createSheet("FirstSheet");  
 
             HSSFRow rowhead = sheet.createRow(0);
@@ -71,7 +72,8 @@ public class CreateExlFile{
         try {
         	String filename = "/home/thyrmr/Desktop/NewXSSFWorkbook.xlsx" ;
             FileOutputStream fos = new FileOutputStream(filename);
-            XSSFWorkbook  workbook = new XSSFWorkbook();            
+            @SuppressWarnings("resource")
+			XSSFWorkbook  workbook = new XSSFWorkbook();            
 
             XSSFSheet sheet = workbook.createSheet("fund");  
 

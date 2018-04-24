@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 
+@SuppressWarnings("serial")
 public class OnlineTest extends JFrame implements ActionListener {
 	JLabel l;
 	JRadioButton jb[] = new JRadioButton[5];

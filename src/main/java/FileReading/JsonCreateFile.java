@@ -1,14 +1,16 @@
 package FileReading;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Iterator;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.util.Iterator;
 
 public class JsonCreateFile {
 
+	@SuppressWarnings("unchecked")
 	public static void WriteJsonFile() {
 		JSONObject obj = new JSONObject();
 		obj.put("name", "mkyong.com");
@@ -53,7 +55,8 @@ public class JsonCreateFile {
 
             // loop array
             JSONArray msg = (JSONArray) jsonObject.get("messages");
-            Iterator<String> iterator = msg.iterator();
+            @SuppressWarnings("unchecked")
+			Iterator<String> iterator = msg.iterator();
             while (iterator.hasNext()) {
                 System.out.println(iterator.next());
             }
