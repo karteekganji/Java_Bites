@@ -35,38 +35,38 @@ public class JsonCreateFile {
 		System.out.print(obj);
 
 	}
-	
+
 	public static void ReadJsonFile() {
 
-        JSONParser parser = new JSONParser();
+		JSONParser parser = new JSONParser();
 
-        try {
+		try {
 
-            Object obj = parser.parse(new FileReader("test.json"));
+			Object obj = parser.parse(new FileReader("test.json"));
 
-            JSONObject jsonObject = (JSONObject) obj;
-            System.out.println(jsonObject);
+			JSONObject jsonObject = (JSONObject) obj;
+			System.out.println(jsonObject);
 
-            String name = (String) jsonObject.get("name");
-            System.out.println(name);
+			String name = (String) jsonObject.get("name");
+			System.out.println(name);
 
-            long age = (Long) jsonObject.get("age");
-            System.out.println(age);
+			long age = (Long) jsonObject.get("age");
+			System.out.println(age);
 
-            // loop array
-            JSONArray msg = (JSONArray) jsonObject.get("messages");
-            @SuppressWarnings("unchecked")
+			// loop array
+			JSONArray msg = (JSONArray) jsonObject.get("messages");
+			@SuppressWarnings("unchecked")
 			Iterator<String> iterator = msg.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }
+			while (iterator.hasNext()) {
+				System.out.println(iterator.next());
+			}
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-    }
-	
+	}
+
 	public static void main(String[] args) {
 		WriteJsonFile();
 		ReadJsonFile();

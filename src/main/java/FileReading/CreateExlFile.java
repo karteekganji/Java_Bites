@@ -4,9 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
 
-import  org.apache.poi.hssf.usermodel.HSSFRow;
-import  org.apache.poi.hssf.usermodel.HSSFSheet;
-import  org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -16,41 +16,39 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CreateExlFile{
-    public static void main(String[]args) throws Exception {
-//    	createHSSFWorkbook();
-//    	createXSSFWorkbook();
-    	ReadAndWritePages();
-    }
-    
-    public static void createHSSFWorkbook(int index, String header) {
-    	try {
-            String filename = "/home/thyrmr/Desktop/NewHSSFWorkbook.xls" ;
-            @SuppressWarnings("resource")
-			HSSFWorkbook workbook = new HSSFWorkbook();
-            HSSFSheet sheet = workbook.createSheet("FirstSheet");  
-
-            HSSFRow rowhead = sheet.createRow(0);
-            rowhead.createCell(index).setCellValue(header);
-            
-            
-            HSSFRow row = sheet.createRow(1);
-            row.createCell(index).setCellValue(header);
-            
-
-            FileOutputStream fileOut = new FileOutputStream(filename);
-            workbook.write(fileOut);
-//            fileOut.flush();
-            fileOut.close();
-
-        } catch ( Exception ex ) {
-            System.out.println(ex);
-        }
+public class CreateExlFile {
+	public static void main(String[] args) throws Exception {
+		// createHSSFWorkbook();
+		// createXSSFWorkbook();
+		ReadAndWritePages();
 	}
-    
-    public static void ReadAndWritePages() {
-    	WebDriver driver;
-    	System.setProperty("webdriver.chrome.driver", "/home/thyrmr/Desktop/chromedriver");
+
+	public static void createHSSFWorkbook(int index, String header) {
+		try {
+			String filename = "/home/thyrmr/Desktop/NewHSSFWorkbook.xls";
+			@SuppressWarnings("resource")
+			HSSFWorkbook workbook = new HSSFWorkbook();
+			HSSFSheet sheet = workbook.createSheet("FirstSheet");
+
+			HSSFRow rowhead = sheet.createRow(0);
+			rowhead.createCell(index).setCellValue(header);
+
+			HSSFRow row = sheet.createRow(1);
+			row.createCell(index).setCellValue(header);
+
+			FileOutputStream fileOut = new FileOutputStream(filename);
+			workbook.write(fileOut);
+			// fileOut.flush();
+			fileOut.close();
+
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}
+	}
+
+	public static void ReadAndWritePages() {
+		WebDriver driver;
+		System.setProperty("webdriver.chrome.driver", "/home/thyrmr/Desktop/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("http://www.seleniumeasy.com/test/table-search-filter-demo.html");
 		driver.manage().window().maximize();
@@ -65,36 +63,36 @@ public class CreateExlFile{
 		for (int j = 0; j < contentList.size(); j++) {
 			createHSSFWorkbook(j, contentList.get(j).getText());
 		}
-		
+
 	}
-    
-    public static void createXSSFWorkbook() throws Exception {
-        try {
-        	String filename = "/home/thyrmr/Desktop/NewXSSFWorkbook.xlsx" ;
-            FileOutputStream fos = new FileOutputStream(filename);
-            @SuppressWarnings("resource")
-			XSSFWorkbook  workbook = new XSSFWorkbook();            
 
-            XSSFSheet sheet = workbook.createSheet("fund");  
+	public static void createXSSFWorkbook() throws Exception {
+		try {
+			String filename = "/home/thyrmr/Desktop/NewXSSFWorkbook.xlsx";
+			FileOutputStream fos = new FileOutputStream(filename);
+			@SuppressWarnings("resource")
+			XSSFWorkbook workbook = new XSSFWorkbook();
 
-            Row row = sheet.createRow(0);   
-            Cell cell0 = row.createCell(0);
-            cell0.setCellValue("Nav Value");
+			XSSFSheet sheet = workbook.createSheet("fund");
 
-            Cell cell1 = row.createCell(1);
+			Row row = sheet.createRow(0);
+			Cell cell0 = row.createCell(0);
+			cell0.setCellValue("Nav Value");
 
-            cell1.setCellValue("Amount Change");       
+			Cell cell1 = row.createCell(1);
 
-            Cell cell2 = row.createCell(2);
-            cell2.setCellValue("Percent Change");
+			cell1.setCellValue("Amount Change");
 
-            workbook.write(fos);
-            fos.flush();
-            fos.close();
-            System.out.println("Your excel file has been generated!");
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+			Cell cell2 = row.createCell(2);
+			cell2.setCellValue("Percent Change");
+
+			workbook.write(fos);
+			fos.flush();
+			fos.close();
+			System.out.println("Your excel file has been generated!");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

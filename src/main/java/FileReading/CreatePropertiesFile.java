@@ -1,38 +1,39 @@
 package FileReading;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
+
 public class CreatePropertiesFile {
-	 public static void main(String[] args) {
+	public static void main(String[] args) {
 
-			Properties prop = new Properties();
-			OutputStream output = null;
+		Properties prop = new Properties();
+		OutputStream output = null;
 
-			try {
+		try {
 
-				output = new FileOutputStream("config.properties");
+			output = new FileOutputStream("config.properties");
 
-				// set the properties value
-				prop.setProperty("database", "localhost");
-				prop.setProperty("dbuser", "mkyong");
-				prop.setProperty("dbpassword", "password");
+			// set the properties value
+			prop.setProperty("database", "localhost");
+			prop.setProperty("dbuser", "mkyong");
+			prop.setProperty("dbpassword", "password");
 
-				// save properties to project root folder
-				prop.store(output, null);
+			// save properties to project root folder
+			prop.store(output, null);
 
-			} catch (IOException io) {
-				io.printStackTrace();
-			} finally {
-				if (output != null) {
-					try {
-						output.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+		} catch (IOException io) {
+			io.printStackTrace();
+		} finally {
+			if (output != null) {
+				try {
+					output.close();
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-
 			}
-		  }
-		}
 
+		}
+	}
+}
