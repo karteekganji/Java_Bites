@@ -15,7 +15,7 @@ int[] arrs, arr2, arr3; // create three arrays
 It is same as writing:
 int arrs[], arr2[], arr3[];    // create three arrays */
 
-package Java_Arrays;
+package Java.Collections;
 
 import java.util.Arrays;
 
