@@ -1,6 +1,6 @@
 package Java.Exceptions;
 
-public class _5ThrowException {
+public class _5ThrowKeyword {
 
 	/*
 	 * We can define our own set of conditions or rules and throw an exception
