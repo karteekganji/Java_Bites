@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Iterator;
 
+
 public class _3ArrayListLoops {
 
 	/*
@@ -17,6 +18,7 @@ public class _3ArrayListLoops {
 	 */
 	
 	public static class LoopExample {
+		@SuppressWarnings("rawtypes")
 		public static void main(String[] args) {
 
 			ArrayList<Integer> arrlist = new ArrayList<Integer>();
@@ -50,9 +52,8 @@ public class _3ArrayListLoops {
 			Iterator iter = arrlist.iterator();
 			while (iter.hasNext()) {
 				System.out.println(iter.next());
-				
-			}
 
+			}
 		}
 		
 		public static class EnumerationExample {
@@ -77,7 +78,6 @@ public class _3ArrayListLoops {
 					System.out.println(e.nextElement());
 			}
 		}
-
-}
+	}
 
 }
