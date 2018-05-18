@@ -22,7 +22,6 @@ public class _4Sorting_ArrayList {
 			listofcountries.add("US");
 			listofcountries.add("China");
 			listofcountries.add("Denmark");
-
 			/* Unsorted List */
 			System.out.println("Before Sorting:");
 			for (String counter : listofcountries) {
@@ -31,7 +30,6 @@ public class _4Sorting_ArrayList {
 			System.out.println();
 			/* Sort statement */
 			Collections.sort(listofcountries);
-
 			/* Sorted List */
 			System.out.println("After Sorting:");
 			for (String counter : listofcountries) {
@@ -39,7 +37,7 @@ public class _4Sorting_ArrayList {
 			}
 		}
 	}
-	
+
 	/*
 	 * Example 2: Sorting of ArrayList<Integer> 
 	 * The same Collections.sort() method can be used for sorting the Integer ArrayList as well.
