@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class _7OtherOperationsArrayList {
+public class _7ArrayList_OtherOperations {
 
 	public static class ComparingTwoArrayLists {
 		public static void main(String[] args) {
@@ -135,7 +135,7 @@ public class _7OtherOperationsArrayList {
 		}
 	}
 	
-	public static class Override_toStringo_ArrayList {
+	public static class Override_toString_ArrayList {
 		public static void main(String[] args) {
 			ArrayList<Student> al = new ArrayList<Student>();
 			al.add(new Student("Chaitanya", 26));
@@ -148,4 +148,66 @@ public class _7OtherOperationsArrayList {
 			}
 		}
 	}
+
+	public static class Cloning_ArrayList {
+
+		@SuppressWarnings("unchecked")
+		public static void main(String a[]) {
+			ArrayList<String> al = new ArrayList<String>();
+
+			// Adding elements to the ArrayList
+			al.add("Apple");
+			al.add("Orange");
+			al.add("Mango");
+			al.add("Grapes");
+			System.out.println("ArrayList: " + al);
+
+			ArrayList<String> al2 = (ArrayList<String>) al.clone();
+			System.out.println("Shallow copy of ArrayList: " + al2);
+
+			// add and remove on original ArrayList
+			al.add("Fig");
+			al.remove("Orange");
+
+			// Display of both ArrayLists after add & remove
+			System.out.println("Original ArrayList:" + al);
+			System.out.println("Cloned ArrayList:" + al2);
+		}
+	}
+	
+	public static class EmptyOperations_ArrayList {
+		public static void main(String[] args) {
+			ArrayList<String> al1 = new ArrayList<String>();
+			al1.add("abc");
+			al1.add("xyz");
+
+			System.out.println("ArrayList before clear: " + al1);
+			al1.clear();
+			System.out.println("ArrayList after clear: " + al1);
+
+			ArrayList<String> al2 = new ArrayList<String>();
+			al2.add("text 1");
+			al2.add("text 2");
+
+			System.out.println("ArrayList before removeAll: " + al2);
+			al2.removeAll(al2);
+			System.out.println("ArrayList before removeAll: " + al2);
+			
+			// ArrayList of Integer Type
+			ArrayList<Integer> al = new ArrayList<Integer>();
+			// Checking whether the list is empty
+			System.out.println("Is ArrayList Empty: " + al.isEmpty());
+
+			// Adding Integer elements
+			al.add(1);
+			al.add(88);
+			al.add(9);
+			al.add(17);
+
+			// Again checking for isEmpty
+			System.out.println("Is ArrayList Empty: " + al.isEmpty());
+
+		}
+	}
+	
 }

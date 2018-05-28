@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class _5Sorting_ArrayList_ObjectSort {
+public class _5ArrayList_ObjectSort {
 
 	public static class Student implements Comparable<Student>{
 		private String studentname;

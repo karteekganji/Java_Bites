@@ -3,7 +3,7 @@ package Java.Collections;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _6GetORSearchArrayListOperations {
+public class _6ArrayList_GetORSearchOperations {
 
 	public static class SublistExample {
 

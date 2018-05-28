@@ -3,7 +3,7 @@ package Java.Collections;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class _4Sorting_ArrayList {
+public class _4ArrayList_Sorting {
 
 	/*
 	 * Example 1: Sorting of ArrayList<String>
