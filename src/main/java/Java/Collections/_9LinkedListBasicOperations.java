@@ -62,7 +62,8 @@ public class _9LinkedListBasicOperations {
 	llistobj.add(2, "bye");
 //	This will add the string “bye” at the 3rd position( 2 index is 3rd position as index starts with 0).
 
-//	3) boolean addAll(Collection c): It adds all the elements of the specified collection c to the list. It throws NullPointerException if the specified collection is null. Consider the below example –
+//	3) boolean addAll(Collection c): It adds all the elements of the specified collection c to the list. 
+//	It throws NullPointerException if the specified collection is null. Consider the below example –
 
 	ArrayList<String> arraylist= new ArrayList<String>();
 	arraylist.add("String1");
@@ -70,7 +71,8 @@ public class _9LinkedListBasicOperations {
 	llistobj.addAll(arraylist);
 //	This piece of code would add all the elements of ArrayList to the LinkedList.
 
-//	4) boolean addAll(int index, Collection c): It adds all the elements of collection c to the list starting from a give index in the list. It throws NullPointerException if the collection c is null and IndexOutOfBoundsException when the specified index is out of the range.
+//	4) boolean addAll(int index, Collection c): It adds all the elements of collection c to the list starting from a give index in the list.
+//	It throws NullPointerException if the collection c is null and IndexOutOfBoundsException when the specified index is out of the range.
 
 	llistobj.addAll(5, arraylist);
 //	It would add all the elements of the ArrayList to the LinkedList starting from position 6 (index 5).
