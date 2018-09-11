@@ -19,7 +19,6 @@ public class CreatePropertiesFile {
 			prop.setProperty("database", "localhost");
 			prop.setProperty("dbuser", "mkyong");
 			prop.setProperty("dbpassword", "password");
-
 			// save properties to project root folder
 			prop.store(output, null);
 
