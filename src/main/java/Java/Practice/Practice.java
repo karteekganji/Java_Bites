@@ -107,15 +107,8 @@ public class Practice {
 		  d2.display();
 		  d3.display();
 	  }
+	  
 	public static void main(String s[]){		//By using Constructor and creating object
-	
-		Practice output=new Practice();
-		output.lists_display();
-		output.randomnumber();
-		output.Exceptions();
-		output.switch_default();
-		output.display();
-		output.display3();
 		 }
 	}
 		 
