@@ -1,7 +1,7 @@
 package Java.Programs;
 
 import java.util.Scanner;
-
+@SuppressWarnings("resource")
 public class ReverseNumber {
 
 	// Program 1: Reverse a number using while Loop

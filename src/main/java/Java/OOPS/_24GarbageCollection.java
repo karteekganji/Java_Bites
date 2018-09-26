@@ -1,5 +1,5 @@
 package Java.OOPS;
-
+@SuppressWarnings("unused")
 public class _24GarbageCollection {
 
 	/*

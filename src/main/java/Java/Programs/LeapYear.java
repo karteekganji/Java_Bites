@@ -10,17 +10,21 @@ public class LeapYear {
 		Scanner scan = new Scanner(System.in);
 		// nextInt() method reads integer entered by user
 		int year = scan.nextInt();
+		scan.close();
+		boolean isLeap;
 		if (year % 100 == 0) {
 			if (year % 400 == 0) {
-				System.err.println(year + " Is a Leap Year");
+				isLeap = true;
 			} else {
-				System.out.println(year + " Is not a Leap Year");
+				isLeap = false;
 			}
 		} else if (year % 4 == 0) {
-			System.out.println(year + " Is a Leap Year");
+			isLeap = true;
 		} else {
-			System.out.println(year + " Is not a Leap Year");
+			isLeap = false;
 		}
+		String result = (isLeap == true ? year + " Is a Leap Year" : year + " Is not a Leap Year");
+		System.out.println(result);
 	}
 
 }
