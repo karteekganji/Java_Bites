@@ -35,5 +35,26 @@ public class Triangles {
 				System.out.println();
 			}
 		}
+
+		public static class FloydGK {
+			public static void main(String[] args) {
+				int rows, i, number = 1;
+				// To get the user's input
+				Scanner input = new Scanner(System.in);
+				System.out.println("Enter the number of rows for floyd's triangle:");
+				// Copying user input into an integer variable named rows
+				rows = input.nextInt();
+				input.close();
+				System.out.println("Floyd's triangle");
+				System.out.println("****************");
+				for (i = 1; i <= rows; i++) {
+					for (int j = 1; j <= i; j++) {
+						System.out.print(number + " ");
+						number++;
+					}
+					System.out.println();
+				}
+			}
+		}
 	}
 }

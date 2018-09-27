@@ -22,6 +22,8 @@ public class ReverseString {
 		}
 	}
 	
+	// A Java program to demonstrate working of recursion
+	
 	public static class ReverseStringUsingRecursion {
 
 		public static void main(String[] args) {
@@ -33,12 +35,9 @@ public class ReverseString {
 			if (str.isEmpty())
 				return str;
 			// Calling Function Recursively
-			System.out.println(reverseString(str.substring(1)) + str.charAt(0));
 			return reverseString(str.substring(1)) + str.charAt(0);
 		}
 	}
-	
-	// A Java program to demonstrate working of recursion
 	
 	public static class ReverseStringUsingRecursion2 {
 		static void printFun(int test) {

@@ -109,7 +109,16 @@ public class Practice {
 	  }
 	  
 	public static void main(String s[]){		//By using Constructor and creating object
-		 }
+		
+	String str = "Welcome to Beginnersbook";
+	String str2 = "";
+	for (int i = 0; i < str.length(); i++) {
+		 str2 = str.substring(i+1)+str.charAt(i);
+		 System.out.println(str2);
+	}
+	
+	
+	}
 	}
 		 
 		 	
