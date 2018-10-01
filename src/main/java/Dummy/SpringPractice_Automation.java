@@ -1,6 +1,5 @@
 package Dummy;
 
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
@@ -16,68 +15,91 @@ import com.workfall.api.utils.Utils_API;
 
 public class SpringPractice_Automation {
 	public static JSONObject body = new JSONObject();
-	public static void CreateUser() throws Exception{
-		String Endpoint ="/add-user";
-		for (int i = 1; i <= 15; i++) {
-			
-		
-		String name = "user"+i;
-		String email = "user"+i+"@spring.com";
-		String mobileNumber = "1232"+i;
-		String employeeId = "E00"+i;
+
+	public static void AddLibrary() throws Exception {
+		String Endpoint = "/add-library";
+
+		String name = Utils_API.RandomString();
+		int cityId = new Random().nextInt(10);
+		if (cityId == 0) {
+			cityId = 4;
+		}
+		String address = Utils_API.RandomStringLong();
+		Boolean isActive = Boolean.TRUE;
 
 		body = new JSONObject();
 		body.put("name", name);
-		body.put("email", email);
-		body.put("mobileNumber", mobileNumber);
-		body.put("employeeId", employeeId);
+		body.put("cityId", cityId);
+		body.put("address", address);
+		body.put("isActive", isActive);
 
-		sendPost_Without(Endpoint, body);
-		}
-}
-	
-	public static void Category() throws Exception{
-		String Endpoint ="/add-category";
-		
-		String Category[] = {"Science fiction","Satire","Drama","Action","Adventure","Romance","Mystery","Horror","Self help"};
-		for (int i = 0; i <Category.length; i++) {
+		sendPost(Endpoint, body);
+	}
+
+	public static void Category() throws Exception {
+		String Endpoint = "/add-category";
+
+		String Category[] = { "Science fiction", "Satire", "Drama", "Action", "Adventure", "Romance", "Mystery",
+				"Horror", "Self help" };
+		for (int i = 0; i < Category.length; i++) {
 			body = new JSONObject();
 			body.put("name", Category[i]);
 			body.put("description", Utils_API.RandomStringLong());
-			sendPost_Without(Endpoint, body);
+			sendPost(Endpoint, body);
 		}
-		}
-	public static void Language() throws Exception{
-		String Endpoint ="/add-language";
-		
-		String Category[] = {"Albanian","Arabic","Polish","French","Portuguese","German","Greek","Russian","English","Hindi","Telugu"};
-		for (int i = 0; i <Category.length; i++) {
+	}
+
+	public static void Publisher() throws Exception {
+		String Endpoint = "/add-publisher";
+		body = new JSONObject();
+		body.put("name", Utils_API.RandomString().toUpperCase());
+		body.put("description", Utils_API.RandomStringLong());
+		sendPost(Endpoint, body);
+	}
+
+	public static void Language() throws Exception {
+		String Endpoint = "/add-language";
+
+		String Category[] = { "Albanian", "Arabic", "Polish", "French", "Portuguese", "German", "Greek", "Russian",
+				"English", "Hindi", "Telugu" };
+		for (int i = 0; i < Category.length; i++) {
 			body = new JSONObject();
 			body.put("name", Category[i]);
-			body.put("isDeleted", Boolean.TRUE);
-			sendPost_Without(Endpoint, body);
+			body.put("isActive", Boolean.TRUE);
+			sendPost(Endpoint, body);
 		}
-		}
-	
-	public static void PracticeSpring() throws Exception {
-		String Endpoint ="/add-book";
+	}
 
-//		int reimbursementId = getReimbursementId();
-//		String reimbursementStatusList[] = {"APPROVED","REJECTED"};
-//		int IdRandom = new Random().nextInt(reimbursementStatusList.length);
-//		String reimbursementStatus= reimbursementStatusList[IdRandom];
-		
-		/*String cityL[] = {"HYD","BZA","PUNE","TNA","TPTY","VSKP","VZM","RJY","LC","NGP"};
+	public static void City() throws Exception {
+		String Endpoint = "/add-city";
+
+		String cityL[] = { "HYD", "BZA", "PUNE", "CHE", "TPTY", "VSKP", "VZM", "RJY", "KMT", "NGP" };
+		String cityL2[] = { "HYDERABAD", "VIJAYAWADA", "PUNE", "CHENNAI", "TIRUPATI", "VISHAKAPATNAM", "VIJAYANAGARAM",
+				"RAJAMUNDRY", "KHAMMAM", "NAGPUR" };
+		for (int i = 0; i < cityL.length; i++) {
+			body = new JSONObject();
+			body.put("cityCode", cityL[i]);
+			body.put("cityName", cityL2[i]);
+			sendPost(Endpoint, body);
+		}
+	}
+
+	public static void SignUp() throws Exception {
+		String Endpoint = "/signup";
+
+		String cityL[] = { "HYD", "BZA", "PUNE", "CHE", "TPTY", "VSKP", "VZM", "RJY", "KMT", "NGP" };
 		int IdRandom1 = new Random().nextInt(cityL.length);
 		String cityCode = cityL[IdRandom1];
-		String email= RandomStringUtils.random(8, "abcdefghijklmnopqrstuvwxyz") + "@" + "spring.com";
-		String genderL[] = {"MALE","FEMALE"};
+		String email = RandomStringUtils.random(8, "abcdefghijklmnopqrstuvwxyz") + "@" + "spring.com";
+		String genderL[] = { "MALE", "FEMALE" };
 		int IdRandom2 = new Random().nextInt(genderL.length);
 		String gender = genderL[IdRandom2];
-		boolean isActive= Boolean.TRUE;
+		boolean isActive = Boolean.TRUE;
 		String mobileNumber = Utils_API.generatePhonenumber();
-		String name= Utils_API.RandomString();
-		String password = Utils_API.RandomString();
+		String name = Utils_API.RandomString();
+		String password = "spring@123";
+		String RoleL[] = { "USER", "AUTHOR" };
+		int RoleRand = new Random().nextInt(RoleL.length);
 
 		body = new JSONObject();
 		body.put("email", email);
@@ -86,43 +108,49 @@ public class SpringPractice_Automation {
 		body.put("mobileNumber", mobileNumber);
 		body.put("name", name);
 		body.put("password", password);
-		body.put("cityCode", cityCode);*/
-		
-		
-//	
-		
-		String author= Utils_API.RandomString();
+		body.put("cityCode", cityCode);
+		body.put("role", RoleL[RoleRand]);
+
+		sendPost(Endpoint, body);
+
+	}
+
+	public static void AddBook() throws Exception {
+		String Endpoint = "/add-book";
+		String author = Utils_API.RandomString();
 		String description = Utils_API.RandomStringLong();
-		boolean isActive= Boolean.TRUE;
-		String pages=  RandomStringUtils.random(3, "123456789");
-		String publisher = Utils_API.RandomString();
-		int IdRandom1 = new Random().nextInt(9);
+		Boolean isActive = Boolean.TRUE;
+		String pages = RandomStringUtils.random(3, "123456789");
+		int IdRandom1 = new Random().nextInt(11);
 		if (IdRandom1 == 0) {
-			IdRandom1 = 4; 
+			IdRandom1 = 4;
 		}
 		int IdRandom2 = new Random().nextInt(9);
 		if (IdRandom2 == 0) {
-			IdRandom2 = 6; 
+			IdRandom2 = 6;
+		}
+
+		int IdRandom3 = new Random().nextInt(10);
+		if (IdRandom3 == 0) {
+			IdRandom3 = 5;
 		}
 		String title = Utils_API.RandomString();
-		
+
 		body = new JSONObject();
 		body.put("author", author);
 		body.put("description", description);
 		body.put("isActive", isActive);
 		body.put("languageId", IdRandom1);
 		body.put("pages", pages);
-		body.put("publisher", publisher);
+		body.put("publisherId", IdRandom3);
 		body.put("categoryId", IdRandom2);
 		body.put("title", title);
-		
-		
-		sendPost_Without(Endpoint, body);
+
+		sendPost(Endpoint, body);
 
 	}
-	
-	public static BufferedReader sendPost_Without(String Endpoint, JSONObject body)
-			throws Exception {
+
+	public static BufferedReader sendPost(String Endpoint, JSONObject body) throws Exception {
 
 		String url = "http://localhost:8282" + Endpoint;
 		URL obj = new URL(url);
@@ -138,28 +166,23 @@ public class SpringPractice_Automation {
 		wr.writeBytes(body.toString());
 		wr.flush();
 		int responseCode = con.getResponseCode();
-		
+
 		BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 		Output.OutputConsole("Sending 'POST' request to : " + url);
 		Output.OutputConsole("Post parameters : " + body);
 		Output.OutputConsole("Response Code : " + responseCode);
 		JSONObject response = new JSONObject(in.readLine());
 		Output.OutputConsole("Response Data : " + response);
-		/*String inputLine;
-		response = new StringBuffer();
-		while ((inputLine = in.readLine()) != null) {
-			response.append(inputLine);
-		}*/
-		
+		/*
+		 * String inputLine; response = new StringBuffer(); while ((inputLine =
+		 * in.readLine()) != null) { response.append(inputLine); }
+		 */
+
 		return in;
 	}
-	
+
 	public static void main(String[] args) throws Exception {
-		for (int i = 0; i <100; i++) {
-			PracticeSpring();
-		}
-	
+		Language();
 
 	}
-
 }
