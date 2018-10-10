@@ -7,10 +7,9 @@ import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+@SuppressWarnings("unchecked")
+public class JsonCreateReadFile {
 
-public class JsonCreateFile {
-
-	@SuppressWarnings("unchecked")
 	public static void WriteJsonFile() {
 		JSONObject obj = new JSONObject();
 		obj.put("name", "mkyong.com");
@@ -55,7 +54,7 @@ public class JsonCreateFile {
 
 			// loop array
 			JSONArray msg = (JSONArray) jsonObject.get("messages");
-			@SuppressWarnings("unchecked")
+			
 			Iterator<String> iterator = msg.iterator();
 			while (iterator.hasNext()) {
 				System.out.println(iterator.next());
