@@ -2,6 +2,7 @@ package Java.FileReading;
 
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import org.json.simple.JSONArray;
@@ -21,6 +22,12 @@ public class JsonCreateReadFile {
 		list.add("msg 3");
 
 		obj.put("messages", list);
+		
+		HashMap<Object, Object> map = new HashMap<Object, Object>();
+		map.put("userName", "mkyong@mkyong.com");
+		map.put("passwors", "1234567");
+		
+		obj.put("details", map);
 
 		try (FileWriter file = new FileWriter("test.json")) {
 
@@ -51,7 +58,10 @@ public class JsonCreateReadFile {
 
 			long age = (Long) jsonObject.get("age");
 			System.out.println(age);
-
+			
+			JSONObject innerObject = (JSONObject) jsonObject.get("details");
+			System.out.println(innerObject.get("userName"));
+			
 			// loop array
 			JSONArray msg = (JSONArray) jsonObject.get("messages");
 			
