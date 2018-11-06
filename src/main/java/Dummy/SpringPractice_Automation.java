@@ -5,6 +5,8 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -12,6 +14,8 @@ import org.json.JSONObject;
 
 import com.workfall.api.utils.Output;
 import com.workfall.api.utils.Utils_API;
+
+import net.minidev.json.JSONArray;
 
 public class SpringPractice_Automation {
 	public static JSONObject body = new JSONObject();
@@ -83,6 +87,24 @@ public class SpringPractice_Automation {
 			sendPost(Endpoint, body);
 		}
 	}
+	
+	public static void addBooksToLibrary() throws Exception {
+		String Endpoint = "/add-books-tolibrary";
+		
+		JSONArray array = new JSONArray();
+		List<JSONObject> list = new ArrayList<JSONObject>();
+				for (int i = 1; i <=30; i++) {
+					for (int j = 1; j <=30; j++) {
+						body = new JSONObject();
+						body.put("bookId", i);
+						body.put("copies", 2);
+						body.put("libraryId", j);
+						list.add(body);
+						array.add(list);
+						sendPost(Endpoint, body);
+					}
+				}
+	}
 
 	public static void SignUp() throws Exception {
 		String Endpoint = "/signup";
@@ -117,7 +139,6 @@ public class SpringPractice_Automation {
 
 	public static void AddBook() throws Exception {
 		String Endpoint = "/add-book";
-		String author = Utils_API.RandomString();
 		String description = Utils_API.RandomStringLong();
 		Boolean isActive = Boolean.TRUE;
 		String pages = RandomStringUtils.random(3, "123456789");
@@ -134,10 +155,15 @@ public class SpringPractice_Automation {
 		if (IdRandom3 == 0) {
 			IdRandom3 = 5;
 		}
+		int IdRandom4 = new Random().nextInt(13);
+		if (IdRandom4 == 0) {
+			IdRandom4 = 7;
+		}
+		
 		String title = Utils_API.RandomString();
 
 		body = new JSONObject();
-		body.put("author", author);
+		body.put("authorId", IdRandom4);
 		body.put("description", description);
 		body.put("isActive", isActive);
 		body.put("languageId", IdRandom1);
@@ -145,6 +171,7 @@ public class SpringPractice_Automation {
 		body.put("publisherId", IdRandom3);
 		body.put("categoryId", IdRandom2);
 		body.put("title", title);
+		body.put("copies", "10");
 
 		sendPost(Endpoint, body);
 
@@ -182,7 +209,9 @@ public class SpringPractice_Automation {
 	}
 
 	public static void main(String[] args) throws Exception {
-		Language();
-
+		for (int i = 0; i < 30; i++) {
+			AddBook();
+		}
+		
 	}
 }

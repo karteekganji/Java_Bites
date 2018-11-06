@@ -100,8 +100,8 @@ public class JsonCreateReadFile {
 	}
 
 	public static void main(String[] args) {
-//		WriteJsonFile();
-		ReadJsonFile();
+		WriteJsonFile();
+//		ReadJsonFile();
 	}
 
 }
