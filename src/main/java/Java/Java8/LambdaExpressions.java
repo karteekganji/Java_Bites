@@ -26,11 +26,11 @@ public class LambdaExpressions {
 
 	/** Example 1: Java Lambda Expression with no parameter : */
 
-	@FunctionalInterface
+	@FunctionalInterface //Optional
 	interface MyFunctionalInterface1 {
 
 		// A method with no parameter
-		public String sayHello();
+		void sayHello();
 	}
 
 	public static class Example1 {
@@ -38,9 +38,9 @@ public class LambdaExpressions {
 		public static void main(String args[]) {
 			// lambda expression
 			MyFunctionalInterface1 msg = () -> {
-				return "Hello World !!";
+				System.out.println("Hello World !!");
 			};
-			System.out.println(msg.sayHello());
+			msg.sayHello();
 		}
 	}
 
