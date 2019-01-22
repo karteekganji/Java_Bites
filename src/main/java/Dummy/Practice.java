@@ -15,6 +15,8 @@ public class Practice {
 		System.out.println("Y >>> " + y);
 	}
 
+	
+	
 	public static void main(String[] args) {
 
 		/*
@@ -72,19 +74,7 @@ public class Practice {
 	  ****
 	 */
 	public static void printingStarsAscendingReverse() {
-		int value = 1;
-		int limit = 4;
-		for (int i = limit; i >= value; i--) {
-			System.out.print(".");
-			if (i == value) {
-				for (int j = value; j <= value ; j++) {
-					System.out.print("*");
-				}
-				value ++;
-				System.out.println();
-			}
-			
-		}
+		
 	}
 
 }
