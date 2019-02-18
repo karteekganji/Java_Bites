@@ -18,7 +18,9 @@ public class Practice {
 		Operation(a, b);*/
 		
 //		fibonacci();
-		BubbleSort();
+//		BubbleSort();
+//		Pyramid();
+		ReverseString();
 	}
 
 	public static void Operation(int a, int b) {
@@ -69,16 +71,38 @@ public class Practice {
 		}
 	}
 	
-	public static void BubbleSort() {
-//	Scanner scanner = new Scanner(System.in);
-
-		int[] ab = {1,4,6,3,2};
-		int a;
-		for (int i = 0; i < ab.length; i++) {
-			a = ab[i];
-			int[] ba;
-			
+	public static void Pyramid(){
+		int n = 7;
+		for(int i = 1; i<=n; i++){
+			for(int j=1; j<=i; j++){
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void ReverseString() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter a string : ");
+		String input = scanner.nextLine();
+		System.out.println(input.length());
+		for (int i = input.length()-1; i >= 0; i--) {
+			System.out.print(input.charAt(i));
+		}
+	}
+	
+	public static boolean ReverseStringRecursion(String string) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter a string : ");
+		String input = scanner.nextLine();
+		if (string.length() == 0 || string.length() == 1)
+		return true;
+		
+		else {
 			
 		}
+	}
+	public static void recursion() {
+		
 	}
 }
