@@ -58,10 +58,16 @@ public class _4Operators {
 		
 		int num1 = 100;
 		int num2 = 200;
+		int num3 = 300;
+		int num4 = 400;
 		num1++;
 		num2--;
+		++num3;
+		--num4;
 		System.out.println("num1++ is: " + num1);
 		System.out.println("num2-- is: " + num2);
+		System.out.println("++num3 is: " + num3);
+		System.out.println("--num4 is: " + num4);
 		
 	}
 	
@@ -133,7 +139,7 @@ public class _4Operators {
 	}
 	
 	public static void main(String[] args) {
-		ternary_Operator();
+		assignmentsOperators();
 
 	}
 

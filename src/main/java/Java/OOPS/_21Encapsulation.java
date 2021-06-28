@@ -4,7 +4,7 @@ public class _21Encapsulation {
 
 	/*
 	 * Encapsulation simply means binding object state(fields) and
-	 * behaviour(methods) together. If you are creating class, you are doing
+	 * behavior(methods) together. If you are creating class, you are doing
 	 * encapsulation.
 	 */
 	
@@ -67,8 +67,8 @@ public class _21Encapsulation {
 			obj.setEmpAge(32);
 			obj.setEmpSSN(112233);
 			System.out.println("Employee Name: " + obj.getEmpName());
-			System.out.println("Employee SSN: " + obj.getEmpSSN());
 			System.out.println("Employee Age: " + obj.getEmpAge());
+			System.out.println("Employee SSN: " + obj.getEmpSSN());
 		}
 	}
 	

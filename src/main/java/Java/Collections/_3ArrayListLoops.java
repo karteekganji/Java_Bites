@@ -38,7 +38,7 @@ public class _3ArrayListLoops {
 			for (Integer num : arrlist) {
 				System.out.println(num);
 			}
-
+			
 			/* While Loop for iterating ArrayList */
 			System.out.println("While Loop");
 			int count = 0;

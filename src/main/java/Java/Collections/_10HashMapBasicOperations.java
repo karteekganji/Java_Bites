@@ -2,10 +2,14 @@ package Java.Collections;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedMap;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 @SuppressWarnings("rawtypes")
 public class _10HashMapBasicOperations {
@@ -27,6 +31,8 @@ public class _10HashMapBasicOperations {
 
 			System.out.println(Collections.singletonList(hmap));
 			hmap.forEach((key, value) -> System.out.println(key + " : " + value));
+			
+			
 			System.out.println("\n#####Another Way of Printing#####\n");
 			/* Display content using Iterator */
 			Set set = hmap.entrySet();
@@ -226,4 +232,23 @@ public class _10HashMapBasicOperations {
 
 		}
 	}
+
+public static void main(String[] args) {
+	HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+
+	/* Adding elements to HashMap */
+	hmap.put(12, "Chaitanya");
+	hmap.put(2, "Rahul");
+	hmap.put(7, "Singh");
+	hmap.put(49, "Ajeet");
+	hmap.put(3, "Anuj");
+	
+	for (Object object : hmap.keySet()) {
+		String string = hmap.get(object);
+		int i = string.length();
+		if (i>4) {
+			System.out.println(hmap.get(object));
+		}
+	}
+}
 }

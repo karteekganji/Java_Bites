@@ -57,7 +57,34 @@ public class ReverseString {
 		}
 	}
 	
-	
-	
-	
+	public static void main(String[] args) {
+		String string = "balakrishna";
+//		int num = 5;
+		/*for (int i = string.length()-1; i >= 0; i--) {
+			System.out.print(string.charAt(i));
+		}
+		System.out.println();
+		for (int i = 1; i <= num; i++) {
+			System.out.print(i);
+		}
+		for (int i = num; i >=1; i--) {
+			System.out.print(i);
+		}*/
+	   
+		int num = 5;
+		
+		/*for(int i = 1; i <= num; i++) {
+            if (i==4) {
+				System.out.println("Hi Bala");
+			}else if(i == 5) {
+				System.out.println("Hello Bala");
+			}else {
+				System.out.println(i);
+			}
+		}*/
+		
+		
+	}
 }
+	
+	

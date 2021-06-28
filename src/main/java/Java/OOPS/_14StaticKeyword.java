@@ -33,7 +33,7 @@ public class _14StaticKeyword {
 	 * multiple Static blocks, which will execute in the same sequence in which
 	 * they have been written into the program.
 	 * 
-	 * As you can see that both the static variables were intialized before we
+	 * As you can see that both the static variables were initialized before we
 	 * accessed them in the main method.
 	 
 		>>>> Example 1: Single static block
@@ -172,7 +172,7 @@ public class _14StaticKeyword {
 	 * >>> Example 5: Static class Example
 	 */
 
-	private static String str = "BeginnersBook";
+	private static  String str = "BeginnersBook";
 
 	// Static class
 	static class MyNestedClass {
@@ -188,7 +188,7 @@ public class _14StaticKeyword {
 		}
 
 	}
-
+	
 	public static void main(String args[]) {
 		/*
 		 * To create instance of nested class we didn't need the outer class

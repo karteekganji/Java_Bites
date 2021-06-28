@@ -7,7 +7,7 @@ public class _12Inheritance {
 	 * 
 	 * The process by which one class acquires the properties and
 	 * functionalities of another class is called inheritance. Inheritance
-	 * provides the idea of reusability of code and each sub class defines only
+	 * provides the idea of re-usability of code and each sub class defines only
 	 * those features that are unique to it, rest of the features can be
 	 * inherited from the parent class.
 	 * 
@@ -326,6 +326,45 @@ public class _12Inheritance {
 			Hybrid_inheritance obj = new Hybrid_inheritance();
 			obj.disp();
 		}
+	}
+	
+	
+	public static class AB {
+
+		void sum(int a, int b) {
+			System.out.println("Parent Class --> " + (a + b));
+		}
+	}
+
+	public static class BC extends AB {
+
+		void sum(int a, int b, int c) {
+			System.out.println("Child Class --> " + (a + b + c));
+		}
+	}
+	
+	public static class DE extends BC {
+
+		 void sum(int a, int b, int c, int d) {
+			System.out.println("Last Child Class --> " + (a*b*c*d));
+		}
+	}
+	
+	public static void main(String[] args) {
+		BC bc = new BC();
+		bc.sum(4, 6);
+		bc.sum(4, 5, 6);
+
+		AB ab = new AB();
+		ab.sum(4, 6);
+	// ab.sum(4, 5, 6); -- This Cannot be called as AB doesn't Extends BC
+
+		AB abbc = new BC(); // Here method abbc is a instance of class BC and Type class AB
+		abbc.sum(8, 9);
+	// abbc.sum(4, 8, 12); -- This Cannot be called as AB doesn't Extends BC
+
+		abbc = new DE();
+		abbc.sum(5, 10);
 	}
 
 }
