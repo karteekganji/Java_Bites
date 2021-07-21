@@ -20,7 +20,7 @@ public class _10HashMapBasicOperations {
 
 		public static void main(String[] args) {
 			/* This is how to declare HashMap */
-			HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+			Map<Integer, String> hmap = new HashMap<Integer, String>();
 
 			/* Adding elements to HashMap */
 			hmap.put(12, "Chaitanya");
@@ -28,10 +28,8 @@ public class _10HashMapBasicOperations {
 			hmap.put(7, "Singh");
 			hmap.put(49, "Ajeet");
 			hmap.put(3, "Anuj");
-
 			System.out.println(Collections.singletonList(hmap));
 			hmap.forEach((key, value) -> System.out.println(key + " : " + value));
-			
 			
 			System.out.println("\n#####Another Way of Printing#####\n");
 			/* Display content using Iterator */
@@ -132,6 +130,13 @@ public class _10HashMapBasicOperations {
 			hashmap.put(9, "P");
 			hashmap.put(66, "Q");
 			hashmap.put(0, "R");
+			hashmap.put(66, "dup");
+			hashmap.put(null, "null");
+			
+			System.out.println("Fatching duplicate key value:"+ hashmap.get(66));
+			
+			System.out.println("Fatching null key value:"+ hashmap.get(null));
+			
 			System.out.println("Size of hashmap is : " + hashmap.size());
 
 			// ### Remove mapping from HashMap example

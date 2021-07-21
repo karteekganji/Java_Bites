@@ -2,7 +2,9 @@ package Java.Programs;
 
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -10,7 +12,7 @@ public class Practice {
 
 	public static void main(String[] args) {
 //		LinearSearch();
-		int nums[] = {1, 2, 3, 4,5,8,9};
+		/*int nums[] = {1, 2, 3, 4,5,8,9};
 
 		int newArr[] = new int[3];
 		  int mid = (nums.length-1)/2;
@@ -18,7 +20,12 @@ public class Practice {
 		  System.out.println(mid);
 		  newArr[0] = nums[mid-1];
 		  newArr[1] = nums[mid];
-		  newArr[2] = nums[mid+1];
+		  newArr[2] = nums[mid+1];*/
+		
+		String[] array = {"abc", "2", "10", "0"};
+		List<String> list = Arrays.asList(array);
+		Collections.sort(list);
+		System.out.println(Arrays.toString(array));
 
 	}
 
@@ -188,6 +195,13 @@ public class Practice {
 
 		System.out.println(a.add(b));
 
+	}
+	
+	public static void prob1() {
+		String[] array = {"abc", "2", "10", "0"};
+		List<String> list = Arrays.asList(array);
+		Collections.sort(list);
+		System.out.println(Arrays.toString(array));
 	}
 
 	public static void recursion() {

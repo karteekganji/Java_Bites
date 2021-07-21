@@ -18,8 +18,8 @@ public class _8Continue_Break_Statements {
 			if (j == 4) {
 				continue;
 			}
-
 			System.out.print(j + " ");
+			
 		}
 
 		/*
@@ -84,7 +84,8 @@ public class _8Continue_Break_Statements {
 	}
 
 	public static void main(String[] args) {
-		break_Statement_For_Loop();
+//		break_Statement_For_Loop();
+		continue_Statement_For_Loop();
 
 	}
 
