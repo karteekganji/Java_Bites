@@ -93,6 +93,19 @@ public class Objects {
 		  return count;
 		}
 
+	public static void fibonacci() {
+	
+		int a = 0, b=1;
+		int sum = 0;
+		for (int i = 1; i <= 8; i++) {
+			System.out.print(a+" "); // 0,1,1,2,3
+			sum = a+b; // 1, 2, 3, 5
+			a = b; //a = 1, 1, 2, 3
+			b = sum; // b = 1, 2, 3, 5
+		}
+		
+		
+	}
 	
 	public static void main(String[] args) {
 		/*Objects obj1 = new Objects();
@@ -102,7 +115,7 @@ public class Objects {
 		obj2.result = 20;
 		System.out.println(obj1.result+"--"+obj2.result);*/
 		
-		Occurence();
+		fibonacci();
 		
 	}
 	

@@ -1,0 +1,13 @@
+- What is system.setProperty? Why do we use this?
+- What is DOM?
+https://www.youtube.com/watch?v=ipkjfvl40s0
+- How to take screenshot in selenium
+- How to upload file in selenium? How many ways are there?
+- What is the difference between CSS & XPath?
+- Why CSS is faster?
+- How to write dynamic xpath when a element attribute values are changing on everytime?
+- What is WebDriver?
+- What are Interfaces does WebDrive implements?
+- Why do we use Webdriver driver = new Chromedriver() only?
+- What are the exceptions in Selenium Webdriver?
+- Explain Webdriver interface complete structure?

@@ -15,8 +15,11 @@ public class JsonCreateReadFile {
 
 	public static void WriteJsonFile() {
 		JSONObject obj = new JSONObject();
+		System.out.println(obj);
 		obj.put("name", "mkyong.com");
 		obj.put("age", new Integer(100));
+		
+		System.out.println(obj);
 		
 		JSONArray list = new JSONArray();
 		list.add("msg 1");
@@ -43,7 +46,7 @@ public class JsonCreateReadFile {
 		
 		obj.put("listOfItems", al);
 		
-		try (FileWriter file = new FileWriter("test.json")) {
+		try (FileWriter file = new FileWriter("files/test.json")) {
 
 			file.write(obj.toJSONString());
 			file.flush();
@@ -100,8 +103,8 @@ public class JsonCreateReadFile {
 	}
 
 	public static void main(String[] args) {
-//		WriteJsonFile();
-		ReadJsonFile();
+		WriteJsonFile();
+//		ReadJsonFile();
 	}
 
 }

@@ -1,0 +1,226 @@
+1. JAVA BASICS
+• What is Java
+• Advantages Of Java
+• JRE VS JDK VS JVM
+• How Java is Platform Independent
+• Java has both Interpreter and Compiler
+• Run Java using Notepad
+• Why Java is not pure Object Oriented
+• Memory Allocation in Java
+• Garbage Collector in Java
+• Access Modifiers in Java
+• Class and Objects in Java
+• New Keyword
+• Encapsulation in Java
+• Polymorphism in Java
+• Inheritance in Java
+• Java doesn’t support multiple Inheritance
+• Abstract classes and Interface
+• keyword:this,super,static, final, finally
+• Exceptional Handling
+• checked Vs unchecked Exceptions in Java
+• throw vs throws in Java
+• Multiple catch blocks
+• Constructor
+• Wrapper Classes
+• Scanner classes
+• Multithreading concept in Java
+• Strings and their immutable nature
+• String based programs
+• Matrices based programs
+• Interview puzzles
+
+
+2. JAVA ADVANCED
+• What is framework
+• Collection framework
+• Collection Vs Collections
+• List Vs ArrayList
+• Programs on ArrayList
+• Hashmap Vs Hashtable
+• Programs on Hashmap
+• Real life examples of Hashmap
+• Programs on Hashtable
+• Why hashtable doesn’t allow null values
+• What are set
+• Programs on set
+• real life example on set
+• Difference between Static and dynamic polymorphism
+• Constructor overloading
+• File Handling in Java
+• Program to write to a file
+• Program to read from a file
+• Introduction to SQL
+• SQL queries
+• Concept of Joins in SQL
+• JAVA pattern based programs
+• Bubble sort
+• Prime number
+• Fibonacci programs
+• Programs on sort
+• Swapping two variables programs
+
+3.Manual Testing
+• Introduction to manual testing
+• Exploring Jira tool
+• Writing Test Cases
+• Writing Defect Id
+• Priority vs Severity Concept
+• STLC details
+• Unit Testing
+• Integration Testing
+• System Testing
+• Acceptance Testing
+• Smoke Testing
+• Alpha & Beta Testing
+• Functional Testing and Non-functional testing
+• Equivalence Partitioning
+• Boundary Value Analysis
+• Defect life cycle
+• Waterfall model
+• Agile Methodology
+• Scrum Methodology
+• Compatibility Testing
+• White Box & Black Box Testing
+• Regression and Retesting
+• Branch Testing and Path Testing
+• Deferred and Deprecated
+• Manual Testing Vs Automation Testing
+
+4. Introduction to Selenium Testing
+• What is Selenium Testing
+• Selenium IDE
+• Selenium Grid
+• Selenium Webdriver
+• Webdriver vs Remote Control
+• Disadvantages Of Selenium Testing
+• Selenium Webdriver Installation
+• Is it Correct WebDriver driver = new WebDriver();
+• Basic driver navigation commands
+• Difference between close() and  quit()
+• Concept of DOM
+
+5. Selenium Basic Concepts
+• Locator Types: CSS Selector, Name, ID
+• Xpath, linkText, className, TagName
+• FindElement Vs FindElements
+• get() methods
+• sendkeys()
+• Handling date, radio buttons, checkboxes, dropdowns
+• Implicit waits vs Explicit Waits
+• PageLoadTimeOut
+• Expected Conditions
+• Fluent Wait
+• Handling alerts, prompts, confirmations
+
+6. Selenium Advanced Concepts
+• cropath installation
+• Relative Vs Absolute Xpath
+• Sibling and child to parent xpath
+• Find element based on text
+• Datepicker advanced example
+• Dynamic Dropdown advanced example
+• AutoSuggestive Dropdown example
+• Check broken links in Selenium
+• Assertions
+• Soft Vs Hard Assertions
+• Action classes
+• Working with Frames
+• Child Window Handling concept
+• JavascriptExecutor
+• Handling scrolls in Selenium
+• Grid and SSL examples
+
+7.Automation Framework
+• What is Automation Framework
+• Features of Automation Framework
+• Different types of Automation Framework
+• What is Data Driven Framework
+• What is Modular Driven Framework
+• What is Keyword Driven Framework
+• What is Hybrid Framework
+
+8.TestNg
+• What is TestNg
+• TestNg Installation
+• TestNg Project
+• Adding TestNg.xml
+• Exclude, Include, Regex
+• TestNg Annotations
+• Groups, DependsOn, enabled
+• Paramterized input, global parameters
+• dataProviders
+• TestNg Listeners
+
+9.Maven
+• Maven project
+• Maven Installation
+• Maven Architecture
+• Maven Terminologies and POM.xml
+• Maven Commands
+• Surefire plugin
+• Integrating maven with TestNg
+• Profile switching
+
+10.Working with AutoIT
+• AutoIT Installation
+• Integration with Selenium
+
+11. Jenkins Integration
+• Jenkins CI Took
+• Jenkins Installation
+• Jenkins Scheduling
+• Jenkins Plugins working
+
+12. Extent Reports
+• Introduction to Extent Reports
+• Creating an extent report
+• Configuring reports
+
+13. Reading excel files
+• Working with POI API
+• Workbook, Sheets
+• Reading Excel files
+
+
+14. Working with log4j
+• log4j Installation
+• Working
+• Integration with Selenium
+
+15. Page Object Pattern and Page factory Model
+• What is Page Object Pattern
+• Working with Page Object Factory
+• Factory Annotations
+
+16. Reading and Writing to MySQL Database
+• Installing MySQL Database
+• Integrating project with databases
+
+17. Version Controlling using GIT
+• Introduction to Git and Github
+• Repository, Clone, Commit
+• Push, pull, merge
+
+18. BDD framework and Cucumber
+• What is BDD framework
+• Features, StepDefinition
+• TestRunner
+• Cucumber Integration with Selenium
+
+19. Project: Build A framework from Scratch
+• Project including all the learning of the course into one
+
+20. SQL Queries
+• Select, Insert, Update, Delete
+• Create table and database
+• Sql datatypes
+• Sql Joins
+• Distinct, Group by, having
+• where, in, between, not
+• max(),min(),avg(),count()
+• Sql joins
+• unions
+• Handling date and time
+• Primary, Composite, Foreign Keys
+• Stored Procedures
