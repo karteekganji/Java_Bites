@@ -110,7 +110,7 @@ public class _7Loops {
 		
 	
 	public static void main(String[] args) {
-		
+
 		do_While_Loop_With_Array();
 
 	}

@@ -205,7 +205,7 @@ public class _12Inheritance {
 		}
 	}
 
-	static class Single_Inheritance extends M {
+	static class Single_Inheritance extends A {
 
 		public void methodB() {
 			System.out.println("Child class method");

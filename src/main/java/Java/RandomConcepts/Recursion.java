@@ -65,8 +65,7 @@ public class Recursion {
 			System.out.println(str+": Is not a Polindrome");
 		
 	}
-	
-	
+
 	    public static void main(String[] args) 
 	    { 
 	    	polindrome();

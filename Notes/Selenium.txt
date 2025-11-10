@@ -11,3 +11,116 @@ https://www.youtube.com/watch?v=ipkjfvl40s0
 - Why do we use Webdriver driver = new Chromedriver() only?
 - What are the exceptions in Selenium Webdriver?
 - Explain Webdriver interface complete structure?
+
+
+
+
+-----Selenium Questions-----
+What is Selenium, and what are its components?
+Difference between Selenium WebDriver and Selenium RC.
+Explain different types of waits in Selenium.
+What is Fluent Wait, and how does it differ from Explicit Wait?
+How to handle dynamic elements in Selenium?
+Difference between XPath and CSS Selector.
+How do you handle alerts, pop-ups, and confirmation boxes in Selenium?
+How to switch between multiple windows in Selenium WebDriver?
+Explain the concept of Page Object Model (POM) in Selenium.
+What is TestNG, and how does it work with Selenium?
+How to generate reports in Selenium?
+How do you perform data-driven testing using Selenium?
+What is Selenium Grid, and how does it enable parallel execution?
+How do you handle frames and iframes in Selenium?
+How to verify broken links using Selenium WebDriver?
+What is Actions class in Selenium, and when do you use it?
+Explain different types of locators in Selenium.
+How can you execute JavaScript commands in Selenium?
+How to handle StaleElementReferenceException in Selenium WebDriver?
+How to perform headless browser testing using Selenium?
+Rest Assured Questions (API Testing)
+What is Rest Assured, and how does it help in API testing?
+Difference between SOAP and REST APIs.
+Explain different HTTP methods and their usage in API testing.
+How do you validate response status codes in Rest Assured?
+What are headers and cookies in API testing? How do you handle them?
+Explain serialization and deserialization in API testing.
+How do you test authentication mechanisms using Rest Assured?
+How to handle query parameters in Rest Assured?
+What are common response formats in API testing (JSON, XML)?
+How do you verify JSON response in Rest Assured?
+Explain the use of Hamcrest matchers in Rest Assured assertions.
+How to perform automated API testing using Rest Assured with TestNG?
+What is OAuth 2.0 authentication, and how do you test APIs using it?
+How can you handle and validate error responses in API testing?
+Explain the importance of API contract testing.
+How do you integrate Rest Assured with Selenium for end-to-end testing?
+Explain the difference between GET, POST, PUT, DELETE requests.
+How do you handle dynamic response values in API testing?
+How do you set up a request payload in Rest Assured?
+How do you verify response time and performance of API calls?
+Manual Testing Questions
+What is manual testing, and why is it important?
+What are different levels of testing?
+Explain black-box and white-box testing.
+What are different types of functional testing?
+What is the difference between verification and validation?
+What is regression testing, and why is it performed?
+Explain the concept of exploratory testing.
+What is UAT (User Acceptance Testing), and when is it conducted?
+What is a test case? How do you write effective test cases?
+What are test scenarios, and how do they differ from test cases?
+What is the difference between a bug, defect, issue, and error?
+Explain boundary value analysis and equivalence partitioning.
+What is risk-based testing, and how do you prioritize test cases?
+How do you ensure maximum test coverage?
+What is a test plan, and what are its components?
+What is severity vs priority in defect management?
+How do you handle conflicting requirements in testing?
+Explain different types of non-functional testing.
+How do you conduct root cause analysis for defects?
+What is difference between alpha testing and beta testing?
+Test Automation Strategy & Best Practices
+What is test automation, and how does it improve efficiency?
+How do you decide which test cases to automate?
+What are the benefits and challenges of automation testing?
+Explain the importance of CI/CD in automated testing.
+How do you handle flaky tests in automation?
+What are common failures in automated tests, and how do you debug them?
+Explain the concept of keyword-driven and data-driven frameworks.
+How do you handle test data in automation frameworks?
+What is parallel execution, and how do you implement it?
+How do you ensure that automation scripts are maintainable?
+Performance Testing
+Difference between load testing and stress testing.
+What tools are commonly used for performance testing?
+How do you analyze performance metrics?
+What is think time in performance testing?
+Explain the concept of scalability testing.
+Security Testing
+What is security testing, and why is it important?
+How do you test authentication mechanisms?
+Explain common security vulnerabilities like SQL Injection and XSS.
+How do you perform penetration testing?
+What is OWASP, and how does it help in security testing?
+Advanced Selenium & API Testing
+How do you integrate Selenium with Docker for test execution?
+How do you implement parallel execution in Selenium Grid?
+How do you test asynchronous APIs?
+What is the difference between GraphQL and REST APIs?
+How do you handle multi-threading in API testing?
+How do you integrate Rest Assured with CI/CD pipelines?
+How do you handle dynamic element changes in Selenium?
+How can you mock APIs for testing when services are unavailable?
+Explain the concept of test doubles (mocks, stubs, fakes).
+How do you use Postman for API automation testing?
+General Best Practices for Testing
+How do you ensure complete traceability in testing?
+How do you deal with false positives and negatives in testing?
+What are the key metrics for measuring test effectiveness?
+Explain defect triaging and its process.
+How do you write effective bug reports?
+What challenges do you face in automation testing, and how do you overcome them?
+How do you test APIs in microservices architecture?
+What is the role of AI in software testing?
+Explain the best practices for writing Selenium locators.
+How do you ensure cross-browser compatibility in Selenium tests?
+

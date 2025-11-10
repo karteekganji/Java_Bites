@@ -53,7 +53,7 @@ public class _4Operators {
 		/*
 		 * ++ and — 
 		 * num++ is equivalent to num=num+1;
-		 * num–- is equivalent to num=num
+		 * num–- is equivalent to num=num-1;
 		 */
 		
 		int num1 = 100;
@@ -139,7 +139,7 @@ public class _4Operators {
 	}
 	
 	public static void main(String[] args) {
-		assignmentsOperators();
+		autoIncrementAndAutoDecrementOperators();
 
 	}
 

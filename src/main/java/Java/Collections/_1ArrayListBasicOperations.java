@@ -29,10 +29,10 @@ public class _1ArrayListBasicOperations {
 		public static void main(String args[]) {
 
 			/*
-			 * Creation of ArrayList: I'm going to add String elements so I made
+			 * Creation of ArrayList: I'm going to add String elements, so I made
 			 * it of string type
 			 */
-			ArrayList<String> obj = new ArrayList<String>();
+			ArrayList<String> obj = new ArrayList<>();
 
 			/* This is how elements should be added to the array list */
 			obj.add("Ajeet");

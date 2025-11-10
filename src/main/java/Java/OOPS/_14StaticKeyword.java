@@ -144,7 +144,7 @@ public class _14StaticKeyword {
 		}
 
 		// non-static method
-		void funcn() {
+		void function() {
 			// Static method called in non-static method
 			display();
 		}
@@ -152,8 +152,8 @@ public class _14StaticKeyword {
 		// static method
 		public static void main(String args[]) {
 			Static_MethodExample obj = new Static_MethodExample();
-			// You need to have object to call this non-static method
-			obj.funcn();
+			// You need to have an object to call this non-static method
+			obj.function();
 
 			// Static method called in another static method
 			display();
@@ -198,6 +198,5 @@ public class _14StaticKeyword {
 		_14StaticKeyword.MyNestedClass obj = new _14StaticKeyword.MyNestedClass();
 		obj.disp();
 	}
-	
 
 }
